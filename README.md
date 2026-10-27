@@ -4,7 +4,6 @@ A MATLAB desktop toolkit for spectral preprocessing, wavelength selection, regre
 
 [简体中文](README.zh-CN.md) · [Installation](docs/INSTALLATION.md) · [Algorithms](docs/ALGORITHMS.md) · [Preprocessing and PCR](docs/PREPROCESSING_PCR.md)
 
-
 # SpectralML-Toolkit V1.0
 
 **A MATLAB-based graphical toolbox for spectral preprocessing, feature selection, regression modeling, and hyperparameter optimization.**
@@ -25,56 +24,6 @@ The toolkit combines commonly used spectral analysis methods with machine learni
 - **Visualization:** Display spectral curves, sample distributions, selected wavelengths, optimization progress, and prediction results.
 - **Result Export:** Export analysis outputs for further research.
 
-## Software Screenshots
-
-### 1. Main Interface
-
-The main graphical interface of SpectralML-Toolkit.
-
-![Main Interface](images/01_Main_Interface.png)
-
-### 2. Raw Spectra
-
-Visualization of the imported spectral dataset and its mean spectrum.
-
-![Raw Spectra](images/03_Raw_spectra.png)
-
-### 3. Sample Distribution
-
-Visualization of the target variable distributions in training and testing subsets, including histograms and boxplots.
-
-![Sample Distribution](images/04_Sample_distribution.png)
-
-### 4. Spectral Preprocessing
-
-Visualization of spectral transformations and preprocessed reflectance curves.
-
-![Spectral Preprocessing](images/05_Processed_spectra.png)
-
-### 5. Feature Selection
-
-Visualization of informative wavelengths selected using spectral feature selection algorithms.
-
-![Feature Selection](images/06_Selected_wavelengths.png)
-
-### 6. Hyperparameter Optimization
-
-Visualization of the optimization process, including parameter evaluations and the best objective value.
-
-![Hyperparameter Optimization](images/07_Optimization.png)
-
-### 7. Model Evaluation
-
-Regression performance evaluation with residual distributions, observed-versus-predicted plots, and statistical metrics.
-
-![Model Evaluation](images/08_Prediction_results.png)
-
-### 8. Parameter Settings
-
-Configuration of cross-validation, optimization objectives, preprocessing parameters, and algorithm settings.
-
-![Parameter Settings](images/09_Parameters.png)
-
 ## General Workflow
 
 1. Import spectral data.
@@ -85,6 +34,7 @@ Configuration of cross-validation, optimization objectives, preprocessing parame
 6. Choose a hyperparameter optimization strategy.
 7. Run the analysis.
 8. Evaluate and export the results.
+
 
 ## Implementation
 
@@ -100,15 +50,6 @@ Download or clone the repository, open the project in MATLAB, and run the main a
 An example dataset is provided in the `examples` directory.
 
 Some algorithms may require additional MATLAB toolboxes. Please check the source code and your MATLAB environment for dependencies.
-
-## Contributing
-
-Suggestions, bug reports, and contributions are welcome through GitHub Issues and Pull Requests.
-
-## License
-
-This project is distributed under the MIT License. See the LICENSE file for details.
-
 
 ## Features
 
@@ -197,6 +138,55 @@ prediction = predictNewSpectra(loaded.bundle, Xnew, wavelengths);
 
 A command-line example is available as `demoSpectralML` after adding the project folders to the MATLAB path.
 
+## Software Screenshots
+
+### 1. Main Interface
+
+The main graphical interface of SpectralML-Toolkit.
+
+![Main Interface](images/01_Main_Interface.png)
+
+### 2. Raw Spectra
+
+Visualization of the imported spectral dataset and its mean spectrum.
+
+![Raw Spectra](images/03_Raw_spectra.png)
+
+### 3. Sample Distribution
+
+Visualization of the target variable distributions in training and testing subsets, including histograms and boxplots.
+
+![Sample Distribution](images/04_Sample_distribution.png)
+
+### 4. Spectral Preprocessing
+
+Visualization of spectral transformations and preprocessed reflectance curves.
+
+![Spectral Preprocessing](images/05_Processed_spectra.png)
+
+### 5. Feature Selection
+
+Visualization of informative wavelengths selected using spectral feature selection algorithms.
+
+![Feature Selection](images/06_Selected_wavelengths.png)
+
+### 6. Hyperparameter Optimization
+
+Visualization of the optimization process, including parameter evaluations and the best objective value.
+
+![Hyperparameter Optimization](images/07_Optimization.png)
+
+### 7. Model Evaluation
+
+Regression performance evaluation with residual distributions, observed-versus-predicted plots, and statistical metrics.
+
+![Model Evaluation](images/08_Prediction_results.png)
+
+### 8. Parameter Settings
+
+Configuration of cross-validation, optimization objectives, preprocessing parameters, and algorithm settings.
+
+![Parameter Settings](images/09_Parameters.png)
 ## Tests and project status
 
 The repository includes automated tests for import rules, split coverage, training-only MSC, fold isolation, metric edge cases, and Ridge model reuse.
@@ -229,7 +219,6 @@ SpectralML-Toolkit/
   tests/                   Automated tests
   docs/                    Installation and algorithm notes
 ```
-
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Report issues with the MATLAB release, selected methods, relevant parameters, and the complete error message. A small anonymized or synthetic input helps reproduce a problem.
