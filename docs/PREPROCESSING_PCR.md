@@ -1,4 +1,4 @@
-# Preprocessing and PCR
+# METHOD_NOTES
 
 Numerical definitions and parameter conventions for wavelength-aware preprocessing and principal component regression. See the project README for validation status.
 
