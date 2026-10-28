@@ -17,7 +17,9 @@ classdef SpectralML < handle
     end
     methods
         function app=SpectralML
-            addpath(genpath(fileparts(mfilename('fullpath'))));
+            if ~isdeployed
+                addpath(genpath(fileparts(mfilename('fullpath'))));
+            end
             app.Config=defaultConfig;
             app.buildUI;
         end
@@ -211,7 +213,13 @@ classdef SpectralML < handle
         function invalidate(app)
             app.Result=[]; app.Preview=[];
             app.UI.Export.Enable='off'; app.updateMetrics([]); app.UI.Best.Text='Best parameters: —';
-            for k=2:6, for ax=app.Axes{k}, cla(ax); title(ax,''); end, end
+            for k=2:6
+                for ax=app.Axes{k}
+                    legend(ax,'off');
+                    cla(ax,'reset');
+                    stylePlotAxes(ax);
+                end
+            end
             app.UI.Status.Text='Settings updated. Ready to run.';
         end
         function run(app)

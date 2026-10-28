@@ -2,7 +2,7 @@ function plotResidualHistogram(ax,r,subset)
 if nargin<3, subset='All'; end
 series=predictionSeries(r,subset); residual=vertcat(series.residual);
 binCount=max(6,min(24,ceil(sqrt(numel(residual)))));
-[~,edges]=histcounts(residual,binCount); cla(ax);
+[~,edges]=histcounts(residual,binCount); cla(ax,'reset');
 % Reused UI axes can retain manual limits/ticks from an earlier drawing.
 ax.XLimMode='auto'; ax.YLimMode='auto'; ax.XTickMode='auto'; ax.YTickMode='auto';
 ax.XScale='linear'; ax.YScale='linear'; hold(ax,'on');

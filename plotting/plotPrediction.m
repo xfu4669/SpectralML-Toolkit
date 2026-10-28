@@ -1,7 +1,7 @@
 function plotPrediction(ax,r,subset,showMetrics)
 if nargin<3, subset='All'; end
 if nargin<4, showMetrics=true; end
-cla(ax); hold(ax,'on'); values=[]; handles=gobjects(0); labels={}; series=predictionSeries(r,subset);
+cla(ax,'reset'); hold(ax,'on'); values=[]; handles=gobjects(0); labels={}; series=predictionSeries(r,subset);
 for k=1:numel(series)
     s=series(k);
     handles(end+1)=scatter(ax,s.observed,s.predicted,38,s.color,'filled', ...

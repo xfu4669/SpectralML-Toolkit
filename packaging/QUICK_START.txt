@@ -1,0 +1,30 @@
+SpectralML-Toolkit 1.0.1 - Windows application
+
+INSTALLATION
+1. Double-click SpectralML_Toolkit_1_0_1_Setup.exe.
+2. Follow the installation wizard. The web installer needs an Internet
+   connection to download and install MATLAB Runtime R2023a if required.
+3. Open SpectralML-Toolkit from its installed shortcut.
+
+Full MATLAB, a MATLAB license, Python, and a source-code setup are not required.
+The application is not a dependency-free portable EXE: MATLAB Runtime must be
+installed on the recipient's computer. First installation and first launch
+may take several minutes.
+
+FIRST ANALYSIS
+1. Click Import data and select a CSV or Excel file.
+2. Use columns SampleID, Target, then numeric wavelength headers (e.g. 350,355).
+3. Select a sample split, preprocessing, feature selection, model, and search.
+4. Open Parameters to adjust settings, then click Run analysis.
+5. Click Export results and choose a writable folder. Figures use 300-dpi TIFF.
+
+An example_spectra.csv file is included. It is synthetic demonstration data.
+
+SYSTEM
+64-bit Windows compatible with MATLAB Runtime R2023a. This build trains CNN
+models on the CPU. Other operating systems require separate platform builds.
+
+SOURCE
+https://github.com/xfu4669/SpectralML-Toolkit
+The project's own source is distributed under the included MIT LICENSE.
+MATLAB Runtime is distributed under MathWorks' own terms.

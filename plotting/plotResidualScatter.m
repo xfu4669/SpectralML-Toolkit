@@ -1,7 +1,8 @@
 function plotResidualScatter(ax,r,subset)
 if nargin<3, subset='All'; end
 series=predictionSeries(r,subset); x=vertcat(series.predicted); residual=vertcat(series.residual);
-cla(ax); hold(ax,'on');
+% Plain cla preserves HandleVisibility='off' trends and shaded regions.
+cla(ax,'reset'); hold(ax,'on');
 [center,lower,upper,middle]=residualTrend(x,residual);
 if numel(center)>1 && max(center)>min(center)
     fill(ax,[center;flipud(center)],[lower;flipud(upper)],[0.94 0.67 0.48], ...
